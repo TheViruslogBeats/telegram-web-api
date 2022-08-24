@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/telegram-web-api/static/css/main.3f6cb843.css",
-    "main.js": "/telegram-web-api/static/js/main.ab2bd11d.js",
+    "main.js": "/telegram-web-api/static/js/main.5f001bce.js",
     "index.html": "/telegram-web-api/index.html",
     "main.3f6cb843.css.map": "/telegram-web-api/static/css/main.3f6cb843.css.map",
-    "main.ab2bd11d.js.map": "/telegram-web-api/static/js/main.ab2bd11d.js.map"
+    "main.5f001bce.js.map": "/telegram-web-api/static/js/main.5f001bce.js.map"
   },
   "entrypoints": [
     "static/css/main.3f6cb843.css",
-    "static/js/main.ab2bd11d.js"
+    "static/js/main.5f001bce.js"
   ]
 }
