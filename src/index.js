@@ -2,14 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App tg={window.Telegram.WebApp} />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+var script = document.createElement("script");
+script.src = "https://telegram.org/js/telegram-web-app.js";
+document.head.appendChild(script);
+
+script.onload = () => {
+  setTimeout(() => {
+    root.render(
+      <React.StrictMode>
+        <HashRouter>
+          <App tg={window.Telegram.WebApp} />
+        </HashRouter>
+      </React.StrictMode>
+    );
+  }, 0);
+};
