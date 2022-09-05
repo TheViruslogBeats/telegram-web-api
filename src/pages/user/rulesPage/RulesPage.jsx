@@ -11,7 +11,7 @@ const RulesPage = () => {
   return (
     <>
       <BackButton />
-      <div className={styles.infoblock}>
+      <div className={styles.infoblock + " " + "borderboxshadow"}>
         <h3>Правила посещения</h3>
         {rulesPageStore.rules.length > 0 ? (
           rulesPageStore.rules.map((rule) => {

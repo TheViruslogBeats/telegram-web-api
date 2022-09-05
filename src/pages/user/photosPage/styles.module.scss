@@ -1,0 +1,36 @@
+.buttonContainer {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.photosContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 0;
+}
+
+.photo {
+  width: 90%;
+  align-self: center;
+  margin: 0.5rem 0;
+}
+
+.photo:nth-last-child() {
+  margin-bottom: 1rem;
+}
+
+.backButton{
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  box-sizing: border-box;
+  padding: .5rem 1rem;
+  border-radius: 15px;
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+  font-weight: 600;
+}

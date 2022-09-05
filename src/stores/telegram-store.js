@@ -1,10 +1,9 @@
-import axios from "axios";
-import { API_URL } from "../api";
 import AuthService from "../authService";
 const { makeAutoObservable } = require("mobx");
 
 class tgwa {
   tg = undefined;
+  isLoading = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -18,15 +17,18 @@ class tgwa {
   }
 
   async fetchAuth() {
-    if (localStorage.getItem("token")) {
+    if (localStorage.getItem("token") && this.isLoading !== true) {
+      this.isLoading = true
       const response = await AuthService.login(this.tg.initDataUnsafe.user)
       localStorage.setItem("token", response.data.accessToken);
-    } else {
+      this.isLoading = false
+    } else if(!localStorage.getItem("token") && this.isLoading !== true) {
+      this.isLoading = true
       const response = await AuthService.registration(
         this.tg.initDataUnsafe.user
       );
-      console.log(response);
       localStorage.setItem("token", response.data.accessToken);
+      this.isLoading = false
     }
   }
 

@@ -13,6 +13,7 @@ const MenuButton = (props) => {
     return (
       <NavLink className={props.menubutton.className} to={props.menubutton.to}>
         <span>{props.menubutton.text}</span>
+        {props.menubutton.svg}
       </NavLink>
     );
   }

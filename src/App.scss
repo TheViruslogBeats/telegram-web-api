@@ -7,6 +7,7 @@
   border-radius: 15px;
   text-decoration: none;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   & span {
@@ -14,4 +15,22 @@
     letter-spacing: 0;
     font-size: 14px;
   }
+  & svg {
+    position: absolute;
+    box-sizing: border-box;
+    width: 90px;
+    height: 90px;
+    color: #fff;
+    opacity: 0.1;
+  }
+}
+
+.borderboxshadow {
+  box-shadow: 1px 1px 13px -5px;
+  border-radius: 15px;
+}
+
+.lkbutton {
+  background-color: goldenrod;
+  box-shadow: -1px 1px 6px 0px rgb(193, 146, 29);
 }

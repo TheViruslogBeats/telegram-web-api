@@ -10,6 +10,9 @@ import PaymentPage from "./pages/user/paymentPage/PaymentPage";
 import TutorsPage from "./pages/user/tutorsPage/TutorsPage";
 import SchedulePage from "./pages/user/schedulePage/SchedulePage";
 import ArticlesPage from "./pages/user/articlesPage/ArticlesPage";
+import PhotosPage from "./pages/user/photosPage/PhotosPage";
+import ResWorksPage from "./pages/user/resWorksPage/ResWorksPage";
+import ProfilePage from "./pages/user/profilePage/ProfilePage";
 
 function App({ tg }) {
   const [styles, setStyles] = useState();
@@ -32,6 +35,9 @@ function App({ tg }) {
         <Route path="tutors" element={<TutorsPage />} />
         <Route path="schedule" element={<SchedulePage />} />
         <Route path="articles" element={<ArticlesPage />} />
+        <Route path="photos" element={<PhotosPage />} />
+        <Route path="resWorks" element={<ResWorksPage />} />
+        <Route path="profile" element={<ProfilePage/>}/>
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
